@@ -1,0 +1,65 @@
+/* ===== APP COMPONENT STYLES ===== */
+/* These styles apply to the main App component and overall layout */
+
+/* Main App container - sets up the overall layout structure */
+.App {
+  min-height: 100vh;           /* Makes the app take up the full height of the viewport */
+  display: flex;                /* Uses flexbox for layout */
+  flex-direction: column;       /* Stacks children vertically (header, main, footer) */
+}
+
+/* Main content area - where page content is displayed */
+main {
+  flex: 1;                     /* Takes up all available space between header and footer */
+  display: flex;                /* Uses flexbox for layout */
+  flex-direction: column;       /* Stacks content vertically */
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;      /* Creates smooth scrolling when clicking on anchor links */
+}
+
+/* Loading animation for page transitions */
+.loading {
+  display: flex;                /* Uses flexbox for centering */
+  justify-content: center;      /* Centers horizontally */
+  align-items: center;          /* Centers vertically */
+  height: 100vh;               /* Takes full viewport height */
+  font-size: 1.2rem;          /* Text size for loading message */
+  color: var(--primary-color); /* Uses our brand color */
+}
+
+/* Page transition animations */
+.page-enter {
+  opacity: 0;                  /* Start invisible */
+  transform: translateY(20px); /* Start 20px below final position */
+}
+
+.page-enter-active {
+  opacity: 1;                  /* End fully visible */
+  transform: translateY(0);    /* End at normal position */
+  transition: all 0.3s ease;   /* Smooth transition over 300ms */
+}
+
+.page-exit {
+  opacity: 1;                  /* Start fully visible */
+  transform: translateY(0);    /* Start at normal position */
+}
+
+.page-exit-active {
+  opacity: 0;                  /* End invisible */
+  transform: translateY(-20px); /* End 20px above starting position */
+  transition: all 0.3s ease;   /* Smooth transition over 300ms */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .App {
+    min-height: 100vh;         /* Maintain full height on mobile */
+  }
+  
+  main {
+    flex: 1;                   /* Maintain flex behavior on mobile */
+  }
+} 

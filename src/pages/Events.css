@@ -1,0 +1,144 @@
+/* Events Hero */
+.events-hero {
+  background: linear-gradient(135deg, rgba(0, 90, 115, 0.05), rgba(0, 167, 181, 0.05));
+  text-align: center;
+  padding-top: 120px;
+}
+
+.events-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Events Grid */
+.events-grid {
+  background: var(--white);
+}
+
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.event-card {
+  padding: 2rem;
+}
+
+.event-header {
+  margin-bottom: 1.5rem;
+}
+
+.event-category {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.event-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.event-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.event-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.event-info svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.event-description {
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.event-card .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: var(--white);
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-content .btn {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-hero {
+    padding-top: 100px;
+  }
+  
+  .events-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .event-card {
+    padding: 1.5rem;
+  }
+  
+  .event-details {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-title {
+    font-size: 1.2rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+} 

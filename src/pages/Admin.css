@@ -1,0 +1,580 @@
+/* ===== ADMIN PAGE STYLES ===== */
+/* These styles create the admin login and dashboard interface */
+
+/* Main admin page container */
+.admin-page {
+  min-height: 100vh;           /* Full viewport height */
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); /* Gradient background */
+  display: flex;                /* Use flexbox for layout */
+  align-items: center;          /* Center content vertically */
+  justify-content: center;      /* Center content horizontally */
+  padding: var(--spacing-lg);  /* Padding */
+}
+
+/* Admin Login Section */
+.admin-login {
+  width: 100%;                 /* Full width */
+  max-width: 400px;           /* Maximum width for login form */
+}
+
+/* Login container */
+.login-container {
+  background: var(--white);     /* White background */
+  border-radius: var(--border-radius-xl); /* Rounded corners */
+  padding: var(--spacing-xl);  /* Internal spacing */
+  box-shadow: var(--shadow-xl); /* Large shadow */
+  text-align: center;          /* Center text */
+}
+
+/* Login header */
+.login-header {
+  margin-bottom: var(--spacing-xl); /* Bottom margin */
+}
+
+.login-header h1 {
+  font-size: 2rem;             /* Large title */
+  font-weight: 700;           /* Bold font weight */
+  color: var(--primary-color); /* Brand color */
+  margin-bottom: var(--spacing-sm); /* Bottom margin */
+}
+
+.login-header p {
+  color: var(--gray);          /* Gray text color */
+  font-size: 1rem;            /* Text size */
+}
+
+/* Login form */
+.login-form {
+  display: flex;                /* Use flexbox for layout */
+  flex-direction: column;       /* Stack items vertically */
+  gap: var(--spacing-lg);      /* Space between form groups */
+}
+
+/* Form group */
+.form-group {
+  text-align: left;            /* Left align text */
+}
+
+/* Form label */
+.form-group label {
+  display: flex;                /* Use flexbox for layout */
+  align-items: center;          /* Center items vertically */
+  gap: var(--spacing-sm);      /* Space between icon and text */
+  font-weight: 600;           /* Semi-bold font weight */
+  color: var(--dark-gray);     /* Dark text color */
+  margin-bottom: var(--spacing-sm); /* Bottom margin */
+  font-size: 0.95rem;         /* Font size */
+}
+
+/* Field icon */
+.field-icon {
+  color: var(--primary-color); /* Brand color for icons */
+  font-size: 1rem;            /* Icon size */
+}
+
+/* Form input */
+.form-group input {
+  width: 100%;                 /* Full width */
+  padding: var(--spacing-md);  /* Internal spacing */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Border */
+  border-radius: var(--border-radius-md); /* Rounded corners */
+  font-size: 1rem;            /* Font size */
+  transition: all var(--transition-normal); /* Smooth transitions */
+  background: var(--white);    /* White background */
+}
+
+/* Form input focus */
+.form-group input:focus {
+  outline: none;               /* Remove default outline */
+  border-color: var(--primary-color); /* Brand color border */
+  box-shadow: 0 0 0 3px rgba(0, 90, 115, 0.1); /* Focus shadow */
+}
+
+/* Password input container */
+.password-input {
+  position: relative;           /* For positioning toggle button */
+}
+
+/* Password toggle button */
+.password-toggle {
+  position: absolute;           /* Absolute positioning */
+  right: var(--spacing-sm);    /* Distance from right */
+  top: 50%;                    /* Center vertically */
+  transform: translateY(-50%);  /* Perfect centering */
+  background: none;            /* No background */
+  border: none;               /* No border */
+  color: var(--gray);         /* Gray color */
+  cursor: pointer;            /* Show pointer cursor */
+  padding: var(--spacing-xs); /* Internal spacing */
+  transition: all var(--transition-normal); /* Smooth transitions */
+}
+
+/* Password toggle button hover */
+.password-toggle:hover {
+  color: var(--primary-color); /* Brand color on hover */
+}
+
+/* Login button */
+.login-btn {
+  background: var(--primary-color); /* Brand color background */
+  color: var(--white);         /* White text color */
+  border: none;               /* No border */
+  padding: var(--spacing-md) var(--spacing-lg); /* Internal spacing */
+  border-radius: var(--border-radius-md); /* Rounded corners */
+  font-size: 1.1rem;          /* Font size */
+  font-weight: 600;           /* Semi-bold font weight */
+  cursor: pointer;            /* Show pointer cursor */
+  transition: all var(--transition-normal); /* Smooth transitions */
+  margin-top: var(--spacing-md); /* Top margin */
+}
+
+/* Login button hover */
+.login-btn:hover {
+  background: var(--accent-color); /* Darker background on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: var(--shadow-md); /* Medium shadow */
+}
+
+/* Login info */
+.login-info {
+  margin-top: var(--spacing-xl); /* Top margin */
+  padding: var(--spacing-md);  /* Internal spacing */
+  background: rgba(0, 90, 115, 0.05); /* Light background */
+  border-radius: var(--border-radius-md); /* Rounded corners */
+  border: 1px solid rgba(0, 90, 115, 0.1); /* Border */
+}
+
+.login-info p {
+  margin: var(--spacing-xs) 0; /* Vertical margin */
+  font-size: 0.9rem;         /* Font size */
+  color: var(--gray);         /* Gray text color */
+}
+
+.login-info code {
+  background: rgba(0, 90, 115, 0.1); /* Light background */
+  padding: 2px 6px;          /* Internal spacing */
+  border-radius: 4px;        /* Rounded corners */
+  font-family: monospace;     /* Monospace font */
+  color: var(--primary-color); /* Brand color */
+}
+
+/* Admin Dashboard */
+.admin-dashboard {
+  width: 100%;                 /* Full width */
+  max-width: 1200px;          /* Maximum width */
+  background: var(--white);    /* White background */
+  border-radius: var(--border-radius-xl); /* Rounded corners */
+  box-shadow: var(--shadow-xl); /* Large shadow */
+  overflow: hidden;            /* Hide overflow */
+}
+
+/* Dashboard header */
+.dashboard-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+  color: var(--white);         /* White text color */
+  padding: var(--spacing-xl);  /* Internal spacing */
+  display: flex;               /* Use flexbox for layout */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center;         /* Center items vertically */
+}
+
+/* Dashboard title */
+.dashboard-title h1 {
+  font-size: 2rem;             /* Large title */
+  font-weight: 700;           /* Bold font weight */
+  margin-bottom: var(--spacing-xs); /* Bottom margin */
+}
+
+.dashboard-title p {
+  opacity: 0.9;               /* Slightly transparent */
+  font-size: 1rem;           /* Font size */
+}
+
+/* Logout button */
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  color: var(--white);         /* White text color */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border */
+  padding: var(--spacing-sm) var(--spacing-md); /* Internal spacing */
+  border-radius: var(--border-radius-md); /* Rounded corners */
+  font-size: 0.95rem;         /* Font size */
+  cursor: pointer;            /* Show pointer cursor */
+  display: flex;              /* Use flexbox for layout */
+  align-items: center;        /* Center items vertically */
+  gap: var(--spacing-sm);    /* Space between icon and text */
+  transition: all var(--transition-normal); /* Smooth transitions */
+}
+
+/* Logout button hover */
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3); /* More opaque background */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+/* Dashboard content */
+.dashboard-content {
+  padding: var(--spacing-xl);  /* Internal spacing */
+}
+
+/* Dashboard stats */
+.dashboard-stats {
+  display: grid;               /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: var(--spacing-lg);     /* Space between stat cards */
+  margin-bottom: var(--spacing-xxl); /* Bottom margin */
+}
+
+/* Stat card */
+.stat-card {
+  background: var(--white);    /* White background */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Border */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  padding: var(--spacing-lg); /* Internal spacing */
+  display: flex;               /* Use flexbox for layout */
+  align-items: center;         /* Center items vertically */
+  gap: var(--spacing-md);     /* Space between icon and info */
+  transition: all var(--transition-normal); /* Smooth transitions */
+}
+
+/* Stat card hover */
+.stat-card:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: var(--shadow-md); /* Medium shadow */
+}
+
+/* Stat icon */
+.stat-icon {
+  font-size: 2rem;            /* Large icon size */
+  color: var(--primary-color); /* Brand color */
+  background: rgba(0, 90, 115, 0.1); /* Light background */
+  padding: var(--spacing-md); /* Internal spacing */
+  border-radius: 50%;         /* Circular shape */
+  display: flex;              /* Use flexbox for centering */
+  align-items: center;        /* Center vertically */
+  justify-content: center;    /* Center horizontally */
+}
+
+/* Stat info */
+.stat-info h3 {
+  font-size: 2rem;            /* Large number size */
+  font-weight: 700;          /* Bold font weight */
+  color: var(--dark-gray);    /* Dark text color */
+  margin-bottom: var(--spacing-xs); /* Bottom margin */
+}
+
+.stat-info p {
+  color: var(--gray);         /* Gray text color */
+  font-size: 0.9rem;         /* Font size */
+  font-weight: 500;          /* Medium font weight */
+}
+
+/* Submissions section */
+.submissions-section {
+  margin-top: var(--spacing-xl); /* Top margin */
+}
+
+.submissions-section h2 {
+  font-size: 1.5rem;          /* Section title size */
+  font-weight: 600;          /* Semi-bold font weight */
+  color: var(--dark-gray);    /* Dark text color */
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+}
+
+/* No submissions */
+.no-submissions {
+  text-align: center;          /* Center text */
+  padding: var(--spacing-xxl); /* Internal spacing */
+  color: var(--gray);         /* Gray text color */
+}
+
+/* Submissions list */
+.submissions-list {
+  display: flex;               /* Use flexbox for layout */
+  flex-direction: column;      /* Stack items vertically */
+  gap: var(--spacing-md);     /* Space between submission cards */
+}
+
+/* Submission card */
+.submission-card {
+  background: var(--white);    /* White background */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Border */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  padding: var(--spacing-lg); /* Internal spacing */
+  display: flex;               /* Use flexbox for layout */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center;         /* Center items vertically */
+  transition: all var(--transition-normal); /* Smooth transitions */
+}
+
+/* Submission card hover */
+.submission-card:hover {
+  box-shadow: var(--shadow-sm); /* Subtle shadow */
+  border-color: var(--primary-color); /* Brand color border */
+}
+
+/* Submission info */
+.submission-info h3 {
+  font-size: 1.2rem;          /* Name size */
+  font-weight: 600;          /* Semi-bold font weight */
+  color: var(--dark-gray);    /* Dark text color */
+  margin-bottom: var(--spacing-xs); /* Bottom margin */
+}
+
+.submission-email {
+  color: var(--primary-color); /* Brand color */
+  font-size: 0.9rem;         /* Font size */
+  margin-bottom: var(--spacing-xs); /* Bottom margin */
+}
+
+.submission-date {
+  color: var(--gray);         /* Gray text color */
+  font-size: 0.8rem;         /* Font size */
+  margin-bottom: var(--spacing-xs); /* Bottom margin */
+}
+
+.submission-class {
+  color: var(--gray);         /* Gray text color */
+  font-size: 0.9rem;         /* Font size */
+  font-weight: 500;          /* Medium font weight */
+}
+
+/* Submission actions */
+.submission-actions {
+  display: flex;               /* Use flexbox for layout */
+  gap: var(--spacing-sm);     /* Space between buttons */
+}
+
+/* Action buttons */
+.view-btn,
+.delete-btn {
+  padding: var(--spacing-sm) var(--spacing-md); /* Internal spacing */
+  border: none;               /* No border */
+  border-radius: var(--border-radius-md); /* Rounded corners */
+  font-size: 0.9rem;         /* Font size */
+  font-weight: 500;          /* Medium font weight */
+  cursor: pointer;           /* Show pointer cursor */
+  display: flex;             /* Use flexbox for layout */
+  align-items: center;       /* Center items vertically */
+  gap: var(--spacing-xs);   /* Space between icon and text */
+  transition: all var(--transition-normal); /* Smooth transitions */
+}
+
+/* View button */
+.view-btn {
+  background: var(--primary-color); /* Brand color background */
+  color: var(--white);        /* White text color */
+}
+
+/* View button hover */
+.view-btn:hover {
+  background: var(--accent-color); /* Darker background on hover */
+}
+
+/* Delete button */
+.delete-btn {
+  background: #dc3545;        /* Red background */
+  color: var(--white);        /* White text color */
+}
+
+/* Delete button hover */
+.delete-btn:hover {
+  background: #c82333;        /* Darker red on hover */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;             /* Fixed position */
+  top: 0;                     /* Position at top */
+  left: 0;                    /* Position at left */
+  right: 0;                   /* Extend to right */
+  bottom: 0;                  /* Extend to bottom */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;              /* Use flexbox for layout */
+  align-items: center;        /* Center vertically */
+  justify-content: center;    /* Center horizontally */
+  z-index: 2000;             /* High z-index */
+  padding: var(--spacing-lg); /* Padding */
+}
+
+/* Modal content */
+.modal-content {
+  background: var(--white);    /* White background */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  box-shadow: var(--shadow-xl); /* Large shadow */
+  max-width: 600px;          /* Maximum width */
+  width: 100%;               /* Full width */
+  max-height: 80vh;          /* Maximum height */
+  overflow-y: auto;          /* Vertical scroll if needed */
+}
+
+/* Modal header */
+.modal-header {
+  padding: var(--spacing-lg); /* Internal spacing */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Bottom border */
+  display: flex;              /* Use flexbox for layout */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center;        /* Center items vertically */
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;          /* Title size */
+  font-weight: 600;          /* Semi-bold font weight */
+  color: var(--dark-gray);    /* Dark text color */
+  margin: 0;                  /* Remove margin */
+}
+
+/* Close button */
+.close-btn {
+  background: none;           /* No background */
+  border: none;              /* No border */
+  font-size: 1.5rem;        /* Large font size */
+  color: var(--gray);        /* Gray color */
+  cursor: pointer;           /* Show pointer cursor */
+  padding: var(--spacing-xs); /* Internal spacing */
+  transition: all var(--transition-normal); /* Smooth transitions */
+}
+
+/* Close button hover */
+.close-btn:hover {
+  color: var(--dark-gray);    /* Darker color on hover */
+}
+
+/* Modal body */
+.modal-body {
+  padding: var(--spacing-lg); /* Internal spacing */
+}
+
+/* Detail section */
+.detail-section {
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+}
+
+.detail-section h3 {
+  font-size: 1.1rem;          /* Section title size */
+  font-weight: 600;          /* Semi-bold font weight */
+  color: var(--primary-color); /* Brand color */
+  margin-bottom: var(--spacing-md); /* Bottom margin */
+  border-bottom: 2px solid rgba(0, 90, 115, 0.1); /* Bottom border */
+  padding-bottom: var(--spacing-xs); /* Bottom padding */
+}
+
+/* Detail item */
+.detail-item {
+  display: flex;               /* Use flexbox for layout */
+  align-items: flex-start;     /* Align items to top */
+  gap: var(--spacing-sm);     /* Space between label and value */
+  margin-bottom: var(--spacing-sm); /* Bottom margin */
+  font-size: 1rem;           /* Font size */
+  line-height: 1.5;          /* Line height */
+}
+
+.detail-item strong {
+  color: var(--dark-gray);    /* Dark text color */
+  min-width: 100px;          /* Minimum width for labels */
+}
+
+/* Address icon */
+.address-icon {
+  color: var(--primary-color); /* Brand color */
+  margin-right: var(--spacing-xs); /* Right margin */
+  margin-top: 2px;           /* Top margin for alignment */
+}
+
+/* Modal footer */
+.modal-footer {
+  padding: var(--spacing-lg); /* Internal spacing */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Top border */
+  text-align: center;         /* Center text */
+}
+
+/* Close modal button */
+.close-modal-btn {
+  background: var(--primary-color); /* Brand color background */
+  color: var(--white);        /* White text color */
+  border: none;               /* No border */
+  padding: var(--spacing-md) var(--spacing-lg); /* Internal spacing */
+  border-radius: var(--border-radius-md); /* Rounded corners */
+  font-size: 1rem;           /* Font size */
+  font-weight: 600;          /* Semi-bold font weight */
+  cursor: pointer;           /* Show pointer cursor */
+  transition: all var(--transition-normal); /* Smooth transitions */
+}
+
+/* Close modal button hover */
+.close-modal-btn:hover {
+  background: var(--accent-color); /* Darker background on hover */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Media queries for different screen sizes */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+  
+  .submission-card {
+    flex-direction: column;    /* Stack items vertically */
+    gap: var(--spacing-md);   /* Space between items */
+    text-align: center;       /* Center text */
+  }
+  
+  .submission-actions {
+    justify-content: center;   /* Center buttons */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .admin-page {
+    padding: var(--spacing-sm); /* Less padding */
+  }
+  
+  .login-container {
+    padding: var(--spacing-lg); /* Less padding */
+  }
+  
+  .dashboard-header {
+    flex-direction: column;    /* Stack items vertically */
+    gap: var(--spacing-md);   /* Space between items */
+    text-align: center;       /* Center text */
+  }
+  
+  .dashboard-stats {
+    grid-template-columns: 1fr; /* Single column */
+  }
+  
+  .modal-content {
+    margin: var(--spacing-sm); /* Margin */
+    max-height: 90vh;         /* Maximum height */
+  }
+  
+  .detail-item {
+    flex-direction: column;    /* Stack items vertically */
+    gap: var(--spacing-xs);   /* Less space */
+  }
+  
+  .detail-item strong {
+    min-width: auto;          /* No minimum width */
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  .login-container {
+    padding: var(--spacing-md); /* Even less padding */
+  }
+  
+  .dashboard-content {
+    padding: var(--spacing-md); /* Less padding */
+  }
+  
+  .submission-card {
+    padding: var(--spacing-md); /* Less padding */
+  }
+  
+  .modal-body {
+    padding: var(--spacing-md); /* Less padding */
+  }
+} 

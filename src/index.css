@@ -1,0 +1,238 @@
+/* ===== GLOBAL CSS STYLES ===== */
+/* This file contains styles that apply to the entire website */
+
+/* CSS Reset - removes default browser styling to ensure consistent appearance */
+* {
+  margin: 0;                    /* Remove default spacing around elements */
+  padding: 0;                   /* Remove default internal spacing */
+  box-sizing: border-box;       /* Include padding and border in element's total width/height */
+}
+
+/* Set default styles for the entire webpage */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;                 /* Font family with fallbacks for different systems */
+  -webkit-font-smoothing: antialiased;  /* Smooth font rendering on webkit browsers */
+  -moz-osx-font-smoothing: grayscale;   /* Smooth font rendering on Firefox */
+  line-height: 1.6;            /* Space between lines of text */
+  color: #333;                 /* Default text color */
+  background-color: #ffffff;    /* Default background color */
+}
+
+/* Remove default styling from code elements */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;                  /* Monospace font for code */
+}
+
+/* ===== CSS CUSTOM PROPERTIES (VARIABLES) ===== */
+/* These variables store colors and values that can be reused throughout the site */
+:root {
+  /* Brand Colors - defined by the project requirements */
+  --primary-color: #005A73;     /* Main brand color - dark blue */
+  --secondary-color: #00A7B5;   /* Secondary brand color - lighter blue */
+  --accent-color: #003B4A;      /* Accent color - darkest blue */
+  
+  /* Neutral Colors */
+  --white: #ffffff;             /* Pure white */
+  --light-gray: #f8f9fa;       /* Very light gray for backgrounds */
+  --gray: #6c757d;             /* Medium gray for secondary text */
+  --dark-gray: #343a40;        /* Dark gray for headings */
+  --black: #000000;            /* Pure black */
+  
+  /* Spacing - consistent spacing throughout the site */
+  --spacing-xs: 0.5rem;        /* Extra small spacing (8px) */
+  --spacing-sm: 1rem;          /* Small spacing (16px) */
+  --spacing-md: 1.5rem;        /* Medium spacing (24px) */
+  --spacing-lg: 2rem;          /* Large spacing (32px) */
+  --spacing-xl: 3rem;          /* Extra large spacing (48px) */
+  --spacing-xxl: 4rem;         /* Extra extra large spacing (64px) */
+  
+  /* Border Radius - for rounded corners */
+  --border-radius-sm: 4px;     /* Small rounded corners */
+  --border-radius-md: 8px;     /* Medium rounded corners */
+  --border-radius-lg: 12px;    /* Large rounded corners */
+  --border-radius-xl: 16px;    /* Extra large rounded corners */
+  
+  /* Shadows - for depth and elevation */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);      /* Subtle shadow */
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);      /* Medium shadow */
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);     /* Large shadow */
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.1);    /* Extra large shadow */
+  
+  /* Transitions - for smooth animations */
+  --transition-fast: 0.2s ease;    /* Fast transition (200ms) */
+  --transition-normal: 0.3s ease;  /* Normal transition (300ms) */
+  --transition-slow: 0.5s ease;    /* Slow transition (500ms) */
+  
+  /* Container max-width for responsive design */
+  --container-max-width: 1200px;   /* Maximum width of content containers */
+}
+
+/* ===== UTILITY CLASSES ===== */
+/* These are reusable classes that can be applied to any element */
+
+/* Container - centers content and sets maximum width */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;              /* Center the container */
+  padding: 0 var(--spacing-md); /* Add horizontal padding */
+}
+
+/* Button styles - reusable button appearance */
+.btn {
+  display: inline-block;        /* Make button inline with text */
+  padding: var(--spacing-sm) var(--spacing-md); /* Internal spacing */
+  border: none;                 /* Remove default border */
+  border-radius: var(--border-radius-md); /* Rounded corners */
+  font-size: 1rem;             /* Text size */
+  font-weight: 500;            /* Medium font weight */
+  text-decoration: none;        /* Remove underline from links */
+  cursor: pointer;              /* Show pointer cursor on hover */
+  transition: all var(--transition-normal); /* Smooth transitions */
+  text-align: center;          /* Center text */
+}
+
+/* Primary button style */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color); /* Darker on hover */
+  transform: translateY(-2px);           /* Slight lift effect */
+  box-shadow: var(--shadow-md);          /* Add shadow on hover */
+}
+
+/* Secondary button style */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Card styles - for content containers */
+.card {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+/* Section styles - for page sections */
+.section {
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+}
+
+.section-title {
+  font-size: 2.5rem;           /* Large title text */
+  font-weight: 700;            /* Bold font weight */
+  color: var(--dark-gray);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;           /* Subtitle text size */
+  color: var(--gray);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  max-width: 600px;            /* Limit width for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== ANIMATIONS ===== */
+/* Keyframe animations for smooth visual effects */
+
+/* Fade in from bottom animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(30px); /* Start 30px below final position */
+  }
+  to {
+    opacity: 1;                 /* End fully visible */
+    transform: translateY(0);   /* End at normal position */
+  }
+}
+
+/* Slide in from left animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px); /* Start 30px to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);     /* End at normal position */
+  }
+}
+
+/* Slide in from right animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);  /* Start 30px to the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);      /* End at normal position */
+  }
+}
+
+/* Pulse animation for attention-grabbing elements */
+@keyframes pulse {
+  0% {
+    transform: scale(1);         /* Normal size */
+  }
+  50% {
+    transform: scale(1.05);      /* Slightly larger */
+  }
+  100% {
+    transform: scale(1);         /* Back to normal size */
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Media queries for different screen sizes */
+
+/* For tablets and smaller desktops */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm); /* Less padding on smaller screens */
+  }
+  
+  .section-title {
+    font-size: 2rem;            /* Smaller title on mobile */
+  }
+  
+  .section {
+    padding: var(--spacing-xl) 0; /* Less padding on smaller screens */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;         /* Even smaller title on mobile */
+  }
+  
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-sm); /* Smaller button padding */
+    font-size: 0.9rem;          /* Smaller button text */
+  }
+} 

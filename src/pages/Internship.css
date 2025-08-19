@@ -1,0 +1,383 @@
+/* ===== INTERNSHIP PAGE STYLES ===== */
+/* These styles create the internship opportunities page */
+
+/* Internship page container */
+.internship-page {
+  padding-top: 70px;           /* Account for fixed header */
+}
+
+/* Internship Hero Section */
+.internship-hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+  color: var(--white);         /* White text */
+  text-align: center;          /* Center text */
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+}
+
+/* Internship hero content */
+.internship-hero-content {
+  max-width: 800px;            /* Maximum width */
+  margin: 0 auto;              /* Center the content */
+}
+
+/* Internship hero title */
+.internship-hero .section-title {
+  font-size: 3rem;             /* Large title */
+  font-weight: 700;            /* Bold font weight */
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+  color: var(--white);         /* White text */
+}
+
+/* Internship hero subtitle */
+.internship-hero .section-subtitle {
+  font-size: 1.2rem;           /* Subtitle size */
+  margin-bottom: var(--spacing-xl); /* Bottom margin */
+  opacity: 0.9;                /* Slightly transparent */
+  line-height: 1.6;            /* Line height */
+}
+
+/* Opportunities Section */
+.opportunities {
+  background: var(--white);     /* White background */
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+}
+
+/* Opportunities grid */
+.opportunities-grid {
+  display: grid;                /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid */
+  gap: var(--spacing-xl);      /* Space between cards */
+  margin-top: var(--spacing-xl); /* Top margin */
+}
+
+/* Opportunity card */
+.opportunity-card {
+  background: var(--white);     /* White background */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  padding: var(--spacing-xl);  /* Internal spacing */
+  box-shadow: var(--shadow-sm); /* Subtle shadow */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+  transition: all var(--transition-normal); /* Smooth transitions */
+}
+
+/* Opportunity card hover effect */
+.opportunity-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: var(--shadow-lg); /* Larger shadow on hover */
+}
+
+/* Opportunity header */
+.opportunity-header {
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+}
+
+/* Opportunity title */
+.opportunity-title {
+  font-size: 1.5rem;           /* Title size */
+  font-weight: 600;            /* Semi-bold font weight */
+  color: var(--dark-gray);     /* Dark text color */
+  margin-bottom: var(--spacing-sm); /* Bottom margin */
+}
+
+/* Opportunity department */
+.opportunity-department {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+  color: var(--white);         /* White text */
+  padding: var(--spacing-xs) var(--spacing-md); /* Internal spacing */
+  border-radius: var(--border-radius-md); /* Rounded corners */
+  font-size: 0.9rem;           /* Small font size */
+  font-weight: 500;            /* Medium font weight */
+}
+
+/* Opportunity details */
+.opportunity-details {
+  display: flex;                /* Use flexbox for layout */
+  gap: var(--spacing-lg);      /* Space between items */
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+  flex-wrap: wrap;              /* Wrap on smaller screens */
+}
+
+/* Detail item */
+.detail-item {
+  display: flex;                /* Use flexbox for layout */
+  align-items: center;          /* Center items vertically */
+  gap: var(--spacing-xs);      /* Space between icon and text */
+  color: var(--gray);          /* Gray text color */
+  font-size: 0.9rem;           /* Small font size */
+}
+
+/* Detail icon */
+.detail-icon {
+  color: var(--primary-color); /* Brand color */
+  font-size: 1rem;             /* Icon size */
+}
+
+/* Opportunity description */
+.opportunity-description {
+  color: var(--gray);          /* Gray text color */
+  line-height: 1.6;            /* Line height */
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+}
+
+/* Opportunity requirements */
+.opportunity-requirements {
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+}
+
+/* Opportunity requirements title */
+.opportunity-requirements h4 {
+  font-size: 1.1rem;           /* Title size */
+  font-weight: 600;            /* Semi-bold font weight */
+  color: var(--dark-gray);     /* Dark text color */
+  margin-bottom: var(--spacing-sm); /* Bottom margin */
+}
+
+/* Opportunity requirements list */
+.opportunity-requirements ul {
+  list-style: none;            /* Remove default list style */
+  padding: 0;                  /* Remove default padding */
+}
+
+/* Opportunity requirements list item */
+.opportunity-requirements li {
+  color: var(--gray);          /* Gray text color */
+  line-height: 1.6;            /* Line height */
+  margin-bottom: var(--spacing-xs); /* Bottom margin */
+  padding-left: var(--spacing-md); /* Left padding */
+  position: relative;          /* For pseudo-element */
+}
+
+/* Opportunity requirements list item before */
+.opportunity-requirements li::before {
+  content: '•';                /* Bullet point */
+  color: var(--primary-color); /* Brand color */
+  font-weight: bold;           /* Bold font weight */
+  position: absolute;          /* Absolute positioning */
+  left: 0;                     /* Position from left */
+}
+
+/* Benefits Section */
+.benefits {
+  background: var(--light-gray); /* Light gray background */
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+}
+
+/* Benefits grid */
+.benefits-grid {
+  display: grid;                /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: var(--spacing-xl);      /* Space between cards */
+  margin-top: var(--spacing-xl); /* Top margin */
+}
+
+/* Benefit card */
+.benefit-card {
+  background: var(--white);     /* White background */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  padding: var(--spacing-xl);  /* Internal spacing */
+  box-shadow: var(--shadow-sm); /* Subtle shadow */
+  text-align: center;          /* Center text */
+  transition: all var(--transition-normal); /* Smooth transitions */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+}
+
+/* Benefit card hover effect */
+.benefit-card:hover {
+  transform: translateY(-5px);  /* Lift effect on hover */
+  box-shadow: var(--shadow-lg); /* Larger shadow on hover */
+}
+
+/* Benefit icon */
+.benefit-icon {
+  width: 80px;                 /* Fixed width */
+  height: 80px;                /* Fixed height */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+  border-radius: 50%;          /* Circular shape */
+  display: flex;                /* Use flexbox for centering */
+  align-items: center;          /* Center vertically */
+  justify-content: center;      /* Center horizontally */
+  margin: 0 auto var(--spacing-lg); /* Center and add bottom margin */
+  color: var(--white);         /* White icon color */
+  font-size: 2rem;             /* Large icon size */
+}
+
+/* Benefit title */
+.benefit-title {
+  font-size: 1.3rem;           /* Title size */
+  font-weight: 600;            /* Semi-bold font weight */
+  color: var(--dark-gray);     /* Dark text color */
+  margin-bottom: var(--spacing-md); /* Bottom margin */
+}
+
+/* Benefit description */
+.benefit-description {
+  color: var(--gray);          /* Gray text color */
+  line-height: 1.6;            /* Line height */
+}
+
+/* Application Section */
+.application {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+  color: var(--white);         /* White text */
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+  text-align: center;          /* Center text */
+}
+
+/* Application content */
+.application-content {
+  max-width: 800px;            /* Maximum width */
+  margin: 0 auto;              /* Center the content */
+}
+
+/* Application title */
+.application .section-title {
+  color: var(--white);         /* White text */
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+}
+
+/* Application subtitle */
+.application .section-subtitle {
+  color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  margin-bottom: var(--spacing-xl); /* Bottom margin */
+}
+
+/* Application steps */
+.application-steps {
+  display: grid;                /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: var(--spacing-xl);      /* Space between steps */
+  margin-bottom: var(--spacing-xl); /* Bottom margin */
+}
+
+/* Step */
+.step {
+  text-align: center;          /* Center text */
+}
+
+/* Step number */
+.step-number {
+  width: 60px;                 /* Fixed width */
+  height: 60px;                /* Fixed height */
+  background: var(--white);     /* White background */
+  color: var(--primary-color); /* Brand color */
+  border-radius: 50%;          /* Circular shape */
+  display: flex;                /* Use flexbox for centering */
+  align-items: center;          /* Center vertically */
+  justify-content: center;      /* Center horizontally */
+  margin: 0 auto var(--spacing-md); /* Center and add bottom margin */
+  font-size: 1.5rem;           /* Large font size */
+  font-weight: 700;            /* Bold font weight */
+}
+
+/* Step title */
+.step h3 {
+  font-size: 1.2rem;           /* Title size */
+  font-weight: 600;            /* Semi-bold font weight */
+  color: var(--white);         /* White text */
+  margin-bottom: var(--spacing-sm); /* Bottom margin */
+}
+
+/* Step description */
+.step p {
+  color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  line-height: 1.6;            /* Line height */
+}
+
+/* Application button */
+.application-btn {
+  background: var(--white);     /* White background */
+  color: var(--primary-color); /* Brand color for text */
+  border: 2px solid var(--white); /* White border */
+  font-size: 1.1rem;           /* Button text size */
+  font-weight: 600;            /* Semi-bold font weight */
+  padding: var(--spacing-md) var(--spacing-xl); /* Internal spacing */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  transition: all var(--transition-normal); /* Smooth transitions */
+  display: inline-flex;         /* Inline flex for icon alignment */
+  align-items: center;          /* Center items vertically */
+  gap: var(--spacing-sm);      /* Space between text and icon */
+}
+
+/* Application button hover effect */
+.application-btn:hover {
+  background: transparent;      /* Transparent background */
+  color: var(--white);         /* White text */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Media queries for different screen sizes */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .internship-hero .section-title {
+    font-size: 2.5rem;         /* Smaller title */
+  }
+  
+  .opportunities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Smaller minimum width */
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller minimum width */
+  }
+  
+  .application-steps {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller minimum width */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .internship-hero .section-title {
+    font-size: 2rem;           /* Even smaller title */
+  }
+  
+  .internship-hero .section-subtitle {
+    font-size: 1.1rem;         /* Smaller subtitle */
+  }
+  
+  .opportunities-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  
+  .opportunity-details {
+    flex-direction: column;    /* Stack items vertically */
+    gap: var(--spacing-sm);    /* Less space between items */
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  
+  .application-steps {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: var(--spacing-lg);    /* More space between steps */
+  }
+  
+  .step {
+    margin-bottom: var(--spacing-lg); /* Bottom margin */
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  .internship-hero .section-title {
+    font-size: 1.8rem;         /* Even smaller title */
+  }
+  
+  .opportunity-card {
+    padding: var(--spacing-lg); /* Less padding */
+  }
+  
+  .benefit-card {
+    padding: var(--spacing-lg); /* Less padding */
+  }
+  
+  .step-number {
+    width: 50px;               /* Smaller width */
+    height: 50px;              /* Smaller height */
+    font-size: 1.2rem;         /* Smaller font size */
+  }
+}

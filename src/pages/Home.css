@@ -1,0 +1,453 @@
+/* ===== HOME PAGE STYLES ===== */
+/* These styles create the main landing page with hero section, features, and other content */
+
+/* Hero Section - Main banner area */
+.hero {
+  min-height: 100vh;           /* Full viewport height */
+  position: relative;           /* For positioning background and overlay */
+  display: flex;                /* Use flexbox for layout */
+  align-items: center;          /* Center content vertically */
+  justify-content: center;      /* Center content horizontally */
+  overflow: hidden;             /* Hide overflow */
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+}
+
+/* Hero background image container */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Hero background image */
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* Cover entire area while maintaining aspect ratio */
+  object-position: center;     /* Center the image */
+}
+
+/* Hero overlay for better text readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.6), 
+    rgba(0, 0, 0, 0.4)
+  );                          /* Dark overlay for better text contrast */
+  z-index: 2;
+}
+
+/* Hero container */
+.hero-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;              /* Center the container */
+  padding: 0 var(--spacing-md); /* Horizontal padding */
+  text-align: center;          /* Center text content */
+  position: relative;           /* For proper stacking */
+  z-index: 3;                  /* Above background and overlay */
+}
+
+/* Hero content - centered */
+.hero-content {
+  max-width: 800px;            /* Maximum width for content */
+  margin: 0 auto;              /* Center the content */
+}
+
+/* Hero title */
+.hero-title {
+  font-size: 3.5rem;           /* Large title text */
+  font-weight: 700;            /* Bold font weight */
+  color: var(--white);         /* White text color */
+  line-height: 1.2;            /* Line height */
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+/* Highlighted text in title */
+.hero-title .highlight {
+  color: var(--secondary-color); /* Secondary color for highlight */
+  background: linear-gradient(45deg, var(--secondary-color), #00D4FF); /* Gradient highlight */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent */
+  background-clip: text;        /* Standard property */
+  text-shadow: none;            /* Remove text shadow for highlighted text */
+}
+
+/* Hero subtitle */
+.hero-subtitle {
+  font-size: 1.2rem;           /* Subtitle text size */
+  color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  line-height: 1.6;            /* Line height */
+  margin-bottom: var(--spacing-xl); /* Bottom margin */
+  max-width: 600px;            /* Limit width for readability */
+  margin-left: auto;            /* Center the subtitle */
+  margin-right: auto;           /* Center the subtitle */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+/* Hero buttons container */
+.hero-buttons {
+  display: flex;                /* Use flexbox for layout */
+  gap: var(--spacing-md);      /* Space between buttons */
+  flex-wrap: wrap; 
+  margin-bottom: 0;             /* Wrap on smaller screens */
+}
+
+.hero-buttons a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Hero buttons */
+.hero-buttons .btn {
+  display: flex;                /* Use flexbox for layout */
+  align-items: center;          /* Center items vertically */
+  gap: var(--spacing-sm);      /* Space between text and icon */
+  padding: var(--spacing-md) var(--spacing-lg); /* Internal spacing */
+  font-size: 1.1rem;           /* Button text size */
+  font-weight: 600;            /* Semi-bold font weight */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  transition: all var(--transition-normal); /* Smooth transitions */
+  text-decoration: none; 
+  margin-bottom: 0;       /* Remove underline */
+}
+
+
+
+/* Features Section */
+.features {
+  background: var(--white);     /* White background */
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;                /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: var(--spacing-xl);      /* Space between feature cards */
+  margin-top: var(--spacing-xl); /* Top margin */
+}
+
+/* Feature card */
+.feature-card {
+  background: var(--white);     /* White background */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  padding: var(--spacing-xl);  /* Internal spacing */
+  box-shadow: var(--shadow-sm); /* Subtle shadow */
+  text-align: center;          /* Center text */
+  transition: all var(--transition-normal); /* Smooth transitions */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+}
+
+/* Feature card hover effect */
+.feature-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: var(--shadow-lg); /* Larger shadow on hover */
+}
+
+/* Feature icon */
+.feature-icon {
+  width: 80px;                 /* Fixed width */
+  height: 80px;                /* Fixed height */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+  border-radius: 50%;          /* Circular shape */
+  display: flex;                /* Use flexbox for centering */
+  align-items: center;          /* Center vertically */
+  justify-content: center;      /* Center horizontally */
+  margin: 0 auto var(--spacing-lg); /* Center and add bottom margin */
+  color: var(--white);         /* White icon color */
+  font-size: 2rem;             /* Large icon size */
+}
+
+/* Feature title */
+.feature-title {
+  font-size: 1.5rem;           /* Title text size */
+  font-weight: 600;            /* Semi-bold font weight */
+  color: var(--dark-gray);     /* Dark text color */
+  margin-bottom: var(--spacing-md); /* Bottom margin */
+}
+
+/* Feature description */
+.feature-description {
+  color: var(--gray);          /* Gray text color */
+  line-height: 1.6;            /* Line height */
+  font-size: 1rem;             /* Font size */
+}
+
+/* Statistics Section */
+.stats {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+  color: var(--white);         /* White text */
+}
+
+/* Statistics grid */
+.stats-grid {
+  display: grid;                /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: var(--spacing-xl);      /* Space between stat items */
+  text-align: center;          /* Center text */
+}
+
+/* Stat item */
+.stat-item {
+  padding: var(--spacing-lg);  /* Internal spacing */
+}
+
+/* Stat number */
+.stat-number {
+  font-size: 3.5rem;           /* Large number text */
+  font-weight: 700;            /* Bold font weight */
+  color: var(--white);         /* White text */
+  margin-bottom: var(--spacing-sm); /* Bottom margin */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow */
+}
+
+/* Stat label */
+.stat-label {
+  font-size: 1.1rem;           /* Label text size */
+  color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  font-weight: 500;            /* Medium font weight */
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: var(--white);     /* White background */
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+}
+
+/* Testimonials grid */
+.testimonials-grid {
+  display: grid;                /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: var(--spacing-xl);      /* Space between testimonial cards */
+  margin-top: var(--spacing-xl); /* Top margin */
+}
+
+/* Testimonial card */
+.testimonial-card {
+  background: var(--white);     /* White background */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  padding: var(--spacing-xl);  /* Internal spacing */
+  box-shadow: var(--shadow-sm); /* Subtle shadow */
+  transition: all var(--transition-normal); /* Smooth transitions */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+}
+
+/* Testimonial card hover effect */
+.testimonial-card:hover {
+  transform: translateY(-5px);  /* Lift effect on hover */
+  box-shadow: var(--shadow-lg); /* Larger shadow on hover */
+}
+
+/* Testimonial content */
+.testimonial-content {
+  position: relative;           /* For quote icon positioning */
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+}
+
+/* Quote icon */
+.quote-icon {
+  position: absolute;           /* Absolute positioning */
+  top: -10px;                  /* Position from top */
+  left: -10px;                 /* Position from left */
+  font-size: 2rem;             /* Large icon size */
+  color: var(--primary-color); /* Brand color */
+  opacity: 0.3;                /* Semi-transparent */
+}
+
+/* Testimonial text */
+.testimonial-text {
+  color: var(--dark-gray);     /* Dark text color */
+  line-height: 1.6;            /* Line height */
+  font-size: 1rem;             /* Font size */
+  font-style: italic;          /* Italic style */
+  margin-left: var(--spacing-md); /* Left margin for quote icon */
+}
+
+/* Testimonial author */
+.testimonial-author {
+  display: flex;                /* Use flexbox for layout */
+  justify-content: space-between; /* Space between name and rating */
+  align-items: center;          /* Center items vertically */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Top border separator */
+  padding-top: var(--spacing-md); /* Top padding */
+}
+
+/* Author info */
+.author-info {
+  flex: 1;                     /* Take remaining space */
+}
+
+/* Author name */
+.author-name {
+  font-size: 1.1rem;           /* Name text size */
+  font-weight: 600;            /* Semi-bold font weight */
+  color: var(--dark-gray);     /* Dark text color */
+  margin-bottom: var(--spacing-xs); /* Bottom margin */
+}
+
+/* Author role */
+.author-role {
+  color: var(--gray);          /* Gray text color */
+  font-size: 0.9rem;           /* Role text size */
+}
+
+/* Testimonial rating */
+.testimonial-rating {
+  display: flex;                /* Use flexbox for layout */
+  gap: var(--spacing-xs);      /* Space between stars */
+}
+
+/* Star icon */
+.star {
+  color: #FFD700;              /* Gold color for stars */
+  font-size: 1.1rem;           /* Star size */
+}
+
+/* Call-to-Action Section */
+.cta {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+  padding: var(--spacing-xxl) 0; /* Vertical padding */
+  color: var(--white);         /* White text */
+  text-align: center;          /* Center text */
+}
+
+/* CTA content */
+.cta-content {
+  max-width: 600px;            /* Maximum width */
+  margin: 0 auto;              /* Center the content */
+}
+
+/* CTA title */
+.cta-title {
+  font-size: 2.5rem;           /* Large title text */
+  font-weight: 700;            /* Bold font weight */
+  color: var(--white);         /* White text */
+  margin-bottom: var(--spacing-lg); /* Bottom margin */
+  line-height: 1.2;            /* Line height */
+}
+
+/* CTA subtitle */
+.cta-subtitle {
+  font-size: 1.2rem;           /* Subtitle text size */
+  color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  line-height: 1.6;            /* Line height */
+  margin-bottom: var(--spacing-xl); /* Bottom margin */
+}
+
+/* CTA button */
+.cta-button {
+  background: var(--white);     /* White background */
+  color: var(--primary-color); /* Brand color for text */
+  border: 2px solid var(--white); /* White border */
+  font-size: 1.1rem;           /* Button text size */
+  font-weight: 600;            /* Semi-bold font weight */
+  padding: var(--spacing-md) var(--spacing-xl); /* Internal spacing */
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  transition: all var(--transition-normal); /* Smooth transitions */
+  display: inline-flex;         /* Inline flex for icon alignment */
+  align-items: center;          /* Center items vertically */
+  gap: var(--spacing-sm);      /* Space between text and icon */
+}
+
+
+
+/* CTA button hover effect */
+.cta-button:hover {
+  background: transparent;      /* Transparent background */
+  color: var(--white);         /* White text */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.cta-button a{
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Media queries for different screen sizes */
+
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.8rem;         /* Smaller title */
+  }
+  
+  .hero-content {
+    max-width: 90%;            /* Use more width on smaller screens */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--spacing-xl) 0; /* Less padding */
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;         /* Even smaller title */
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;         /* Smaller subtitle */
+  }
+  
+  .hero-buttons {
+    flex-direction: column;    /* Stack buttons vertically */
+    gap: var(--spacing-sm);    /* Less space between buttons */
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;               /* Full width buttons */
+    justify-content: center;   /* Center button content */
+  }
+  
+
+  
+  .features-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  
+  .cta-title {
+    font-size: 2rem;           /* Smaller title */
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;         /* Even smaller title */
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;           /* Smaller subtitle */
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;         /* Smaller stat numbers */
+  }
+  
+  .cta-title {
+    font-size: 1.8rem;         /* Smaller title */
+  }
+} 

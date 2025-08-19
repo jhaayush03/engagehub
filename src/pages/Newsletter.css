@@ -1,0 +1,264 @@
+/* Newsletter Hero */
+.newsletter-hero {
+  background: linear-gradient(135deg, rgba(0, 90, 115, 0.05), rgba(0, 167, 181, 0.05));
+  text-align: center;
+  padding-top: 120px;
+}
+
+.newsletter-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Newsletter Content */
+.newsletter-content {
+  background: var(--white);
+}
+
+.newsletter-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Newsletter Info */
+.newsletter-info {
+  padding-right: 2rem;
+}
+
+.newsletter-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.newsletter-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.newsletter-info > p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+.newsletter-benefits h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+
+.newsletter-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.newsletter-benefits li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+.newsletter-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Newsletter Form */
+.newsletter-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-card {
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.form-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.form-header p {
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.form-group label svg {
+  color: var(--primary-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 90, 115, 0.1);
+}
+
+.subscribe-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.subscribe-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.subscribe-btn .spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.form-note {
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-message svg {
+  font-size: 3rem;
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.success-message h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.success-message p {
+  color: var(--gray);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .newsletter-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .newsletter-info {
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-hero {
+    padding-top: 100px;
+  }
+  
+  .form-card {
+    padding: 2rem;
+  }
+  
+  .newsletter-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .newsletter-info > p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-card {
+    padding: 1.5rem;
+  }
+  
+  .newsletter-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .subscribe-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+} 
